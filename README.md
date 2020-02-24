@@ -9,11 +9,33 @@ CJHttp
 - armiot: https://github.com/cai2yy/armot
     >一个轻便的IOT管理和控制平台
 
-### 知识点
+
+特点
+--
+- 部署：
+> 部署静态资源
+- 作为web容器：
+> - 处理连接和接收数据
+>  - 底层I/O由netty实现 
+> - 制定协议，封装http请求和相应
+> - 派发请求，制定路由映射规则
+> - 结果渲染，支持html, json
+> - Cookie管理
+> - 拦截器
+> - TODO 集群模式
+- 优点：
+> - NIO阻塞I/O模型，性能良好
+- 缺点：
+> - 底层的I/O操作，由netty实现和管理
+> - 热部署
+
+知识点
+---
 - 函数式接口：实现及简化url到handler的映射
 - netty编程，底层Socket I/O由netty实现
 
-### 使用
+使用
+---
 - 绑定：
 >1. 创建Router 
 >2. 绑定各个Controller 
@@ -27,8 +49,7 @@ CJHttp
 >5. Router（执行路由）
 >6. HandlerFunction
 
-
-### 路由映射规则
+#### 路由映射规则
 跟路由绑定子路由
 ```
 router.child("/device", new NewsController());
@@ -71,10 +92,16 @@ public void getDevice(HttpContext ctx, HttpRequest req) {
 
 Cai2yy
 ---
+Java, Python, Node.js, Love 
+
 https://github.com/cai2yy
+
 - ArmOT: 边缘计算IOT软件+数据上云web端管理平台
 > https://github.com/cai2yy/armot
 - CJHttp: 基于netty实现的轻便web框架（http）
 > https://github.com/cai2yy/cjhttp
 - CJIoc：多功能的轻量级IOC框架
 > https://github.com/cai2yy/cjioc
+- CJEviter: 模仿node.js中eventEmitter类的JAVA实现
+> https://github.com/cai2yy/cjeviter
+
