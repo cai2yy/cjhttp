@@ -3,6 +3,6 @@ package server;
 @FunctionalInterface
 public interface Controller {
 
-	public Controller route();
+	public Router route();
 
 }
