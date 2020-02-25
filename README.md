@@ -24,15 +24,16 @@ CJHttp
 > - 拦截器
 > - TODO 集群模式
 - 优点：
-> - NIO阻塞I/O模型，性能良好
+> - NIO I/O模型，性能良好
 - 缺点：
 > - 底层的I/O操作，由netty实现和管理
-> - 热部署
+> - 前端由freemarker实现模板渲染，功能不够强大
+> - 路由绑定没有简化到注解方式，映射规则也不够强大
 
 知识点
 ---
 - 函数式接口：实现及简化url到handler的映射
-- netty编程，底层Socket I/O由netty实现
+- netty编程，底层Http Socket I/O由netty实现
 
 使用
 ---
